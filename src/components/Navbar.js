@@ -6,8 +6,14 @@ const Navbar = () => {
   return (
     <AppBar
         position="static"
+        sx={{background: 'transparent',
+            boxShadow: 'none',
+            display: 'flex',
+            justifyContent: 'space-between'}}
     >
-        <Toolbar>
+        <Toolbar
+        sx={{display: 'flex',
+        justifyContent: 'space-around'}}>
             <Typography>
                 <Link to="/">Rudi</Link>
             </Typography>
