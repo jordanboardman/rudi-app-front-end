@@ -4,7 +4,7 @@ import App from './components/App.js';
 import {legacy_createStore as createStore} from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import reducer from '../reducers/reducer.js';
+import reducer from './reducers/reducer.js';
 import BaseLayout from './components/layout/BaseLayout.js';
 import Students from './components/Students.js';
 import Teachers from './components/Teachers';
