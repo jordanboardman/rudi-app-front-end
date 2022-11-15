@@ -6,7 +6,7 @@ const BaseLayout = () => {
     <>
     <Navbar />
     
-    {props.children}
+    {/* {props.children} */}
     </>
   )
 }
