@@ -11,6 +11,7 @@ import Teachers from './components/Teachers';
 import LogIn from './components/LogIn.js';
 import Register from './components/Register.js';
 import About from './components/About.js';
+import './index.css'
 
 const store = createStore(reducer);
 
