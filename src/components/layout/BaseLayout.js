@@ -1,14 +1,18 @@
-import React from 'react'
-import Navbar from '../Navbar'
+import React from "react";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 const BaseLayout = (props) => {
   return (
     <>
-    <Navbar />
-    
-    {props.children}
-    </>
-  )
-}
 
-export default BaseLayout
+      <Navbar />
+      <Footer />
+
+      {props.children}
+
+    </>
+  );
+};
+
+export default BaseLayout;
