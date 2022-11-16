@@ -12,6 +12,7 @@ import LogIn from "./components/LogIn.js";
 import Register from "./components/Register.js";
 import About from "./components/About.js";
 import Error from "./components/Error";
+import "./index.css";
 
 const store = createStore(reducer);
 
