@@ -16,7 +16,7 @@ import "./index.css";
 
 const store = createStore(reducer);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -29,6 +29,7 @@ root.render(
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </BaseLayout>
       </Router>

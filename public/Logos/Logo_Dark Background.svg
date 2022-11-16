@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <g id="Group_41" data-name="Group 41" transform="translate(-1440 -812)">
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="200" height="200" transform="translate(1440 812)" fill="#2b2c42"/>
+    <g id="Rudi_Logo-04" transform="translate(1445.458 859.433)">
+      <path id="Path_1" data-name="Path 1" d="M29.778,85a22.059,22.059,0,0,1,22.06-22.066V72.4A12.591,12.591,0,0,0,39.23,85v22.06H29.778Z" transform="translate(0 -20.655)" fill="#e13c45"/>
+      <path id="Path_2" data-name="Path 2" d="M77.1,85.006V62.94h9.458V85.006A12.607,12.607,0,1,0,111.773,85V62.94h9.453V85.006A22.063,22.063,0,1,1,77.1,85Z" transform="translate(-22.108 -20.657)" fill="#e13c45"/>
+      <path id="Path_3" data-name="Path 3" d="M264.008,66.7v40.369H254.55V62.94Z" transform="translate(-105.003 -20.657)" fill="#edf2f4"/>
+      <path id="Path_4" data-name="Path 4" d="M222.861,29.457,200.38,18.72l.139,10.305V46.194a22.151,22.151,0,0,0-28.183,2.552,21.256,21.256,0,0,0-6.458,15.6A22.063,22.063,0,1,0,210,64.343V33.358l12.884,5.9ZM196.847,73.268a12.607,12.607,0,1,1,2-15.214A12.607,12.607,0,0,1,196.847,73.268Z" transform="translate(-63.578 0)" fill="#edf2f4"/>
+    </g>
+  </g>
+</svg>

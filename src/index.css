@@ -1,0 +1,17 @@
+
+.link {
+  color: #edf2f4;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
