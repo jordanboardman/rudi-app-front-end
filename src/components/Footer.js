@@ -38,7 +38,7 @@ const Footer = () => {
             About
           </Link>
         </Typography>
-
+        {/* Below still needs to connect to react-router once the Rudiments page is made and added. */}
         <Typography sx={{ fontWeight: "bolder" }}>
           <Link to="/rudiments" className="link">
             Rudiments!
