@@ -4,9 +4,11 @@ import Navbar from '../Navbar'
 const BaseLayout = (props) => {
   return (
     <>
-    <Navbar />
-    
-    {props.children}
+
+      <Navbar />
+      <Footer />
+
+      {props.children}
     </>
   )
 }
