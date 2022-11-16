@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./components/App";
 import { legacy_createStore as createStore } from "redux";
 import { Provider } from "react-redux";
@@ -12,7 +11,6 @@ import Teachers from "./components/Teachers";
 import LogIn from "./components/LogIn.js";
 import Register from "./components/Register.js";
 import About from "./components/About.js";
-import Error from "./components/Error";
 
 const store = createStore(reducer);
 
