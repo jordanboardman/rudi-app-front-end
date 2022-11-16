@@ -25,7 +25,9 @@ const Item = styled(Paper)(({ theme }) => ({
   borderBottom: '20px',
   fontSize: '39px'
 
+  
 }));
+
 
 export default function App() {
   return (
@@ -33,11 +35,11 @@ export default function App() {
       <CssBaseline />
       <main>
         {/* Hero unit */}
-        <Box
+        <Box 
           sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
+            pt: 20,
+            pb: 20,
+            backgroundImage:'/Photo Assets/drum-sticks-drumming-beat-rhythm-on-drum-surface-w-2021-09-09-17-39-38-utc.jpg'
           }}
         >
           <Container maxWidth="sm">
@@ -45,7 +47,7 @@ export default function App() {
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color='#2B2C42'
               gutterBottom
             >
               LEARN THE BASICS
@@ -59,23 +61,23 @@ export default function App() {
               spacing={2}
               justifyContent="center"
             >
-              <Button size="large" sx={{borderRadius: 10}} variant="contained">Learn More</Button>
+              <Button size="large" sx={{borderRadius: '52px', height:'77px', width:'317px', backgroundColor:'#E13C45'}} variant="contained">Learn More</Button>
             </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           {/* What is Rudi */}
-          <Grid item xs={12} md={6} >
+          <Grid item xs={12} md={6} sx={{pb: 10}}>
             <CardActionArea component="a" href="#">
               <Card sx={{ display: 'flex'}}>
               <CardMedia
                   component="img"
-                  sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-                  // image={post.image}
+                  sx={{ width: '50%', display: { xs: 'none', sm: 'block' } }}
+                  src='/Photo Assets/a-boy-enjoys-music-playing-the-drum-set-2021-09-24-04-29-01-utc.jpg'
                 />
                 <CardContent sx={{ flex: 1 }}>
-                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold'}}>
+                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold', color:'#2B2C42'}}>
                     What Is Rudi?
                   </Typography>
                   <Typography variant="subtitle1" paragraph>
@@ -88,84 +90,101 @@ export default function App() {
           {/* End what is Rudi */}
           {/* Start who Rudi is for */}
           <CardContent sx={{ flex: 1, display: 'flex', justifyContent:"center"}}>
-                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold'}}>
+                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold', color:'#2B2C42'}}>
                    Who It's For
                   </Typography>
           </CardContent>
           <Grid container rowSpacing={1}>
               <Grid xs={4} sx={{padding:'10px'}}>
-                <Card sx={{display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px'}}>
+                <Card sx={{ backgroundColor: '#8D99AE22', color:'#2B2C42', display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px', justifyContent:'center'}}>
                     <CardMedia
                       component="img"
                       sx={{
-                        // 16:9
-                        pt: '20%',
+                        height:'90px',
+                        width:'90px',
+                        display:'flex',
+                        marginTop:'10px'
                       }}
-                      image="https://source.unsplash.com/random"
-                      alt="random"
+                      image="Logos/bass-clef.png"
+                      alt="music note"
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography gutterBottom variant="h5" component="h2" sx={{display:'flex', justifyContent:'center', paddingRight:'10px', color:'#2B2C42'}}>
                         Students
                       </Typography>
                       <Typography>
-                      Rudi provides students with a fun and engaging way to enhance their basic drumming necessities. Progression based learning, mastery rewards, and bonus content make for a productive training program. The excitement of completion rewards and bonus content make for an enhanced interest in learning the needed skills of rudiments.
+                      Rudi provides students a fun and engaging way to enhance their basic drumming necessities. Progression-based learning, mastery rewards, and bonus content make for a productive training program. The excitement of completion rewards and bonus content enhance interest in learning the skills of rudiments.
                       </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid xs={4} sx={{padding:'10px'}}>
-                  <Card sx={{display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px' }}>
-                    <CardMedia
+                  <Card sx={{ backgroundColor: '#8D99AE22', color:'#2B2C42', display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px', justifyContent:'center' }}>
+                  <CardMedia
                       component="img"
                       sx={{
-                        // 16:9
-                        pt: '20%',
+                        height:'90px',
+                        width:'90px',
+                        display:'flex',
+                        marginTop:'10px'
                       }}
-                      image="https://source.unsplash.com/random"
-                      alt="random"
+                      image="Logos/drumsticks.png"
+                      alt="music note"
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        Private Lesson Teachers
+                      <Typography gutterBottom variant="h5" component="h2" sx={{display:'flex', justifyContent:'center', color:'#2B2C42'}}>
+                        Private Teachers
                       </Typography>
                       <Typography>
-                      Rudi was created out of a need for instructors to find a fun and engaging way to teach their students rudiments. By using this tool, private lesson teachers have a fun progression based learning tool at their fingertips. It’s an excellent way to track your student’s progress and grasp on the concepts.                    </Typography>
+                      Rudi was created out of a need for instructors to find a fun and engaging way to teach their students rudiments. By using this tool, private lesson teachers have a fun progression based learning tool at their fingertips. It’s an excellent way to track your student’s progress and grasp on the concepts.
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
                 <Grid xs={4} sx={{padding:'10px'}}>
-                  <Card sx={{display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px' }}>
-                    <CardMedia
+                <Card sx={{ backgroundColor: '#8D99AE22', color:'#2B2C42', display: 'flex', flexWrap:'wrap', flexDirection: 'row', borderRadius:'20px', justifyContent:'center' }}>
+                  <CardMedia
                       component="img"
                       sx={{
-                        // 16:9
-                        pt: '20%',
+                        height:'90px',
+                        width:'90px',
+                        display:'flex',
+                        marginTop:'10px'
                       }}
-                      image="https://source.unsplash.com/random"
-                      alt="random"
+                      image="Logos/stave.png"
+                      alt="music note"
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography gutterBottom variant="h5" component="h2" sx={{display:'flex', justifyContent:'center', color:'#2B2C42'}}>
                         School Teachers
                       </Typography>
                       <Typography>
-                      Rudi is also there for school teachers and band directors who need a reliable source to help their percussion students learn drumming essentials. This enables educators without a primary percussion background to more efficiently teach content that would normally be difficult concepts for students to grasp.                    </Typography>
+                      Rudi is also there for school teachers and band directors who need a reliable source to help their percussion students learn drumming essentials. This enables educators without a primary percussion background to more efficiently teach content that would normally be difficult concepts for students to grasp.
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
             </Grid>
             {/* end who is Rudi for */}
             {/* Start how it works */}
-          <CardContent sx={{ flex: 1, display: 'flex', justifyContent:"center"}}>
-                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold'}}>
+          <CardContent sx={{ flex: 1, display: 'flex', justifyContent:"center", pt:10}}>
+                  <Typography component="h2" variant="h5" sx={{fontSize:'62px', fontWeight:'bold', color:'#2B2C42'}}>
                    How It Works
                   </Typography>
           </CardContent>
-            <Stack spacing={2}>
-                    <Item>Progression based learning</Item>
-                    <Item>Reward program</Item>
-                    <Item>Bonus levels to further skillsets</Item>
+            <Stack spacing={2} sx={{pb: 18, display:'flex'}}>
+                    <Item sx={{display:'flex', alignItems:'center', justifyContent:'center', padding:'20px'}}>
+                      <img src="/Logos/equalizer.png" alt="equalizer"/>
+                      Progression-based learning
+                      </Item>
+                    <Item sx={{display:'flex', alignItems:'center', justifyContent:'center', padding:'20px'}}>
+                      <img src="/Logos/medal.png" alt="medal" />
+                      Reward program
+                    </Item>
+                    <Item sx={{display:'flex', alignItems:'center', justifyContent:'center', padding:'20px'}}>
+                      <img src="/Logos/rock.png" alt="rock" />
+                      Bonus levels to further skillsets
+                    </Item>
             </Stack>
         </Container>
       </main>
