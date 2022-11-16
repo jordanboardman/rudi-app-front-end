@@ -5,10 +5,12 @@ import Navbar from "../Navbar";
 const BaseLayout = (props) => {
   return (
     <>
+
       <Navbar />
       <Footer />
 
       {props.children}
+
     </>
   );
 };
