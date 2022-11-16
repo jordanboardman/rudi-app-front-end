@@ -12,6 +12,7 @@ import Teachers from "./components/Teachers";
 import LogIn from "./components/LogIn.js";
 import Register from "./components/Register.js";
 import About from "./components/About.js";
+import Error from "./components/Error";
 
 const store = createStore(reducer);
 
@@ -28,6 +29,7 @@ root.render(
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </BaseLayout>
       </Router>
