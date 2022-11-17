@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer";
+import Footer from "../Footer.js";
 import Navbar from "../Navbar";
 
 const BaseLayout = (props) => {
