@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 
@@ -14,7 +13,6 @@ const LogIn = () => {
   }
   return (
     <>
-      <CssBaseline />
       <div className="login">
       <Box
       component="form"
@@ -44,7 +42,7 @@ const LogIn = () => {
           <Button
           variant="contained"
           onClick={handleClick}>
-            Submit
+            Log-In
           </Button>
       </Box>
       </div>
