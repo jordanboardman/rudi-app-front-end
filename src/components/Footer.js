@@ -7,11 +7,12 @@ const Footer = () => {
     <AppBar
       position="static"
       sx={{
+        zIndex:'1',
         backgroundColor: "#2B2C42",
         display: "flex",
         position: "fixed",
         bottom: 0,
-        width: "100%",
+        width: "100%"
       }}
     >
       <Toolbar
