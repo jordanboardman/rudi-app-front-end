@@ -1,6 +1,11 @@
+import React from "react";
+import Rudiment from "./Rudiment";
+
 function App() {
   return (
-    <>App</>
+    <>
+      <Rudiment />
+    </>
   );
 }
 
