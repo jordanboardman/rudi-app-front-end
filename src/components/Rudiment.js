@@ -11,29 +11,29 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { CardActionArea, Container } from "@mui/material";
+import { Box, CardActionArea, Container } from "@mui/material";
 
-const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-  marginLeft: "auto",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+// const ExpandMore = styled((props) => {
+//   const { expand, ...other } = props;
+//   return <IconButton {...other} />;
+// })(({ theme, expand }) => ({
+//   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+//   marginLeft: "auto",
+//   transition: theme.transitions.create("transform", {
+//     duration: theme.transitions.duration.shortest,
+//   }),
+// }));
 
-export default function Rudiment() {
-  const [expanded, setExpanded] = React.useState(false);
+export default function Rudiment(props) {
+  // const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
     <>
-      <Container sx={{ display: "flex", justifyContent: "space-between" }}>
+      {/* <Container sx={{ display: "flex", justifyContent: "space-between" }}>
         <Card sx={{ maxWidth: 345, backgroundColor: "#2B2C42" }}>
           <CardHeader
             avatar={
@@ -92,38 +92,51 @@ export default function Rudiment() {
               <Typography color="#EDF2F4">Have fun!</Typography>
             </CardContent>
           </Collapse>
-        </Card>
+        </Card> */}
 
-        <Container>
-          <Card sx={{ maxWidth: 445, backgroundColor: "#2B2C42" }}>
-            <CardActionArea>
-              <CardMedia
+      <Container>
+        <Card sx={{ maxWidth: 445, backgroundColor: "#E13C45" }}>
+          <CardActionArea>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                transform: "translateY(10px)",
+              }}
+            >
+              <Avatar sx={{ bgcolor: "#EDF2F4" }} aria-label="recipe">
+                &#129345;
+              </Avatar>
+            </Box>
+            {/* <CardMedia
                 component="img"
                 height="140"
-                image="/PhotoAssets/singlestrokeroll.png"
+                image="/Photo Assets/singlestrokeroll.png"
                 alt="Single Stroke Role Notation"
-              />
-              <CardContent>
-                <Typography
-                  color="#EDF2F4"
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  Single Stroke Roll
-                </Typography>
-                <Typography color="#EDF2F4" variant="body2">
-                  Even drummers with 0% knowledge of rudiments understand this
+              /> */}
+            <CardContent>
+              <Typography
+                color="#EDF2F4"
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                {/* Single Stroke Roll */}
+                {props.name}
+              </Typography>
+              <Typography color="#EDF2F4" variant="body2">
+                {/* Even drummers with 0% knowledge of rudiments understand this
                   one and tend to play it naturally. This less a rudiment and
                   more so a natural drumming pattern that dates back as far as
                   humans have played drums. Think cavemen around the fire! Yep,
-                  they played this one.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Container>
+                  they played this one. */}
+                {props.summary}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </Container>
+      {/* </Container> */}
     </>
   );
 }
