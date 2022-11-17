@@ -13,6 +13,7 @@ import Register from "./components/Register.js";
 import About from "./components/About.js";
 import Error from "./components/Error";
 import "./index.css";
+import Rudiment from "./components/Rudiment";
 
 const store = createStore(reducer);
 
@@ -30,6 +31,7 @@ root.render(
             <Route path="/login" element={<LogIn />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Error />} />
+            <Route path="/rudiments" element={<Rudiment />} />
           </Routes>
         </BaseLayout>
       </Router>
