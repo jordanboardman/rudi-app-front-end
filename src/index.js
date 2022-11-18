@@ -13,7 +13,6 @@ import Register from "./components/Register.js";
 import About from "./components/About.js";
 import Error from "./components/Error";
 import "./index.css";
-import Rudiment from "./components/Rudiment";
 import Rudiments from "./components/Rudiments";
 
 const store = createStore(reducer);
