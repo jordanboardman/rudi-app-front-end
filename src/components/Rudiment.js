@@ -96,7 +96,7 @@ export default function Rudiment(props) {
 
       <Container>
         <Card sx={{ maxWidth: 445, backgroundColor: "#E13C45" }}>
-          <CardActionArea>
+          <CardActionArea href={props.link} target="_blank">
             <Box
               sx={{
                 display: "flex",
