@@ -7,12 +7,12 @@ const Footer = () => {
     <AppBar
       position="static"
       sx={{
-        zIndex:'1',
+        zIndex: "1",
         backgroundColor: "#2B2C42",
         display: "flex",
         position: "fixed",
         bottom: 0,
-        width: "100%"
+        width: "100%",
       }}
     >
       <Toolbar
@@ -30,7 +30,7 @@ const Footer = () => {
         </Box>
         <Typography sx={{ fontWeight: "bolder" }}>
           <Link to="/" className="link">
-            Rudi
+            Home
           </Link>
         </Typography>
 
