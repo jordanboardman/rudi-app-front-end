@@ -93,7 +93,7 @@ const Register = () => {
           <Button
           variant="contained"
           sx={{backgroundColor: '#E13C45',
-        borderRadius: '52px'}}
+          borderRadius: '52px'}}
           onClick={handleClick}>
             Register
           </Button>
