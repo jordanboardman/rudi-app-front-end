@@ -14,43 +14,38 @@ const Register = () => {
   const [password, setPassword] = useState('')
   const [userType, setUserType] = useState('')
   const [code, setCode] = useState('')
-  const handleClick = e => {
-    e.preventDefault()
-    console.log(email)
-    console.log(password)
-    console.log(userType)
-    console.log(code)
-  }
-
-  const handleCode = (code) => {
-    setCode(code)
-  }
-
   const [users, setUsers] = useState(false);
+  
+  // const createUser = e => {
+  //   e.preventDefault()
+  //   console.log(email)
+  //   console.log(password)
+  //   console.log(userType)
+  //   console.log(code)
+  // }
+
+  // const handleCode = (code) => {
+  //   setCode(code)
+  // }
+
+  
   useEffect(() => {
-    getUser();
+    createUser();
   }, []);
-  function getUser() {
-    fetch('http://localhost:3001')
-      .then(response => {
-        return response.text();
-      })
-      .then(data => {
-        setUsers(data);
-      });
-  }
   function createUser() {
-    let username = prompt('Enter username');
-    let password = prompt('Enter password');
+    let username = email;
+    let password = password;
+    let role = userType;
+    let code = code;
     fetch('http://localhost:3001/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({username, password}),
+      body: JSON.stringify({username, password, role, code}),
     })
       .then(response => {
-        return response.text();
+        return response.json();
       })
       .then(data => {
         alert(data);
@@ -125,7 +120,7 @@ const Register = () => {
           variant="contained"
           sx={{backgroundColor: '#E13C45',
         borderRadius: '52px'}}
-          onClick={handleClick}>
+          onClick={createUser}>
             Register
           </Button>
         </Box>
