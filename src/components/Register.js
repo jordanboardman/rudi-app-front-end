@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -26,6 +26,37 @@ const Register = () => {
     setCode(code)
   }
 
+  const [users, setUsers] = useState(false);
+  useEffect(() => {
+    getUser();
+  }, []);
+  function getUser() {
+    fetch('http://localhost:3001')
+      .then(response => {
+        return response.text();
+      })
+      .then(data => {
+        setUsers(data);
+      });
+  }
+  function createUser() {
+    let username = prompt('Enter username');
+    let password = prompt('Enter password');
+    fetch('http://localhost:3001/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({username, password}),
+    })
+      .then(response => {
+        return response.text();
+      })
+      .then(data => {
+        alert(data);
+        getUsers();
+      });
+  }
   return (
     <>
       <div className="login">
