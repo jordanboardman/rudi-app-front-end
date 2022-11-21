@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Typography, Toolbar, Box, Button } from "@mui/material";
+import { AppBar, Typography, Toolbar, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -45,25 +45,6 @@ const Footer = () => {
             Rudiments!
           </Link>
         </Typography>
-
-        {/* <Typography sx={{ fontWeight: "bolder" }}>
-          <Link to="/students" className="link">
-            Students
-          </Link>
-        </Typography>
-
-        <Typography sx={{ fontWeight: "bolder" }}>
-          <Link to="/teachers" className="link">
-            Teachers
-          </Link>
-        </Typography> */}
-
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}
-        >
-          Contact
-        </Button>
       </Toolbar>
     </AppBar>
   );
