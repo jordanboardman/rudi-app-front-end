@@ -24,9 +24,9 @@ const Register = () => {
   //   console.log(code)
   // }
 
-  // const handleCode = (code) => {
-  //   setCode(code)
-  // }
+  const handleCode = (code) => {
+    setCode(code)
+  }
 
   useEffect(() => {
     createUser();
@@ -48,7 +48,7 @@ const Register = () => {
       })
       .then((data) => {
         alert(data);
-        getUsers();
+        // getUsers();
       });
   }
   return (
