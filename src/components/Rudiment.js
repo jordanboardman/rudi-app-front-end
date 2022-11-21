@@ -11,7 +11,6 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box, CardActionArea, Container } from "@mui/material";
 
 // const ExpandMore = styled((props) => {
 //   const { expand, ...other } = props;
