@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -9,49 +9,36 @@ import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import ClassCodeEntry from './ClassCodeEntry';
 
+
 const Register = () => {
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [userType, setUserType] = useState('')
   const [code, setCode] = useState('')
-  const [users, setUsers] = useState(false);
-  
-  // const createUser = e => {
-  //   e.preventDefault()
-  //   console.log(email)
-  //   console.log(password)
-  //   console.log(userType)
-  //   console.log(code)
-  // }
 
-  // const handleCode = (code) => {
-  //   setCode(code)
-  // }
+const handleCode = (code) => {
+  setCode(code)
+}
 
-  
-  useEffect(() => {
-    createUser();
-  }, []);
-  function createUser() {
-    let username = email;
-    let password = password;
-    let role = userType;
-    let code = code;
-    fetch('http://localhost:3001/', {
+  function createUser(e) {
+    e.preventDefault();
+    fetch('http://localhost:3001/createuser',{
       method: 'POST',
       headers: {
+        'Accept':'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({username, password, role, code}),
-    })
-      .then(response => {
-        return response.json();
+      body: JSON.stringify({
+        username:username, 
+        password:password,
+        role:userType,
+        code:code})
       })
-      .then(data => {
-        alert(data);
-        getUsers();
-      });
-  }
+      .then(res => res.text(), console.log('in response'))
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+    }
+
   return (
     <>
       <div className="login">
@@ -69,7 +56,7 @@ const Register = () => {
           <TextField 
           id="outlined-email"
           label="Email"
-          onChange={e=>{setEmail(e.target.value)}}
+          onChange={e=>{setUsername(e.target.value)}}
           />
           <br/>
          
@@ -92,7 +79,8 @@ const Register = () => {
             </FormLabel>
             <RadioGroup
             name="user-type-radio-group"
-            onChange={e=>{setUserType(e.target.value)}}>
+            onChange={e=>{setUserType(e.target.value)}}
+            >
               <FormControlLabel 
               value="student" 
               control={<Radio 
@@ -113,7 +101,7 @@ const Register = () => {
           </FormControl>
           <br/>
 
-          <ClassCodeEntry user={userType} handleCode={handleCode} />
+          <ClassCodeEntry user={userType} handleCode={handleCode} onChange={e=>{setCode(e.target.value)}} />
           <br />
           
           <Button
