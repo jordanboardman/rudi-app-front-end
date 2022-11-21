@@ -5,7 +5,7 @@ import { Box, Typography } from "@mui/material";
 const Rudiments = () => {
   return (
     <>
-      <Box>
+      <Box sx={{ paddingBottom: "100px" }}>
         <Box
           sx={{
             display: "flex",
