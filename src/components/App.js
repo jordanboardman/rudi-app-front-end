@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CardActionArea from "@mui/material/CardActionArea";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -64,18 +65,20 @@ export default function App() {
               spacing={2}
               justifyContent="center"
             >
-              <Button
-                size="large"
-                sx={{
-                  borderRadius: "52px",
-                  height: "77px",
-                  width: "317px",
-                  backgroundColor: "#E13C45",
-                }}
-                variant="contained"
-              >
-                Learn More
-              </Button>
+              <Link to="/rudiments" underline="none" className="link">
+                <Button
+                  size="large"
+                  sx={{
+                    borderRadius: "52px",
+                    height: "77px",
+                    width: "317px",
+                    backgroundColor: "#E13C45",
+                  }}
+                  variant="contained"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Stack>
           </Container>
         </Box>
@@ -83,7 +86,8 @@ export default function App() {
           {/* End hero unit */}
           {/* What is Rudi */}
           <Grid item xs={12} md={6} sx={{ pb: 10 }}>
-            <CardActionArea component="a" href="#">
+            {/* Jordan/ I took out a href="*" tag in the CardActionArea below. Feel free to put it back if needed :-D */}
+            <CardActionArea component="a">
               <Card sx={{ display: "flex" }}>
                 <CardMedia
                   component="img"
@@ -154,19 +158,21 @@ export default function App() {
                   alt="music note"
                 />
                 <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      paddingRight: "10px",
-                      color: "#2B2C42",
-                    }}
-                  >
-                    Students
-                  </Typography>
+                  <Link to="/students" underline="none" className="link">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        paddingRight: "10px",
+                        color: "#2B2C42",
+                      }}
+                    >
+                      Students
+                    </Typography>
+                  </Link>
                   <Typography>
                     Rudi provides students a fun and engaging way to enhance
                     their basic drumming necessities. Progression-based
@@ -202,18 +208,20 @@ export default function App() {
                   alt="music note"
                 />
                 <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      color: "#2B2C42",
-                    }}
-                  >
-                    Private Teachers
-                  </Typography>
+                  <Link to="/teachers" underline="none" className="link">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        color: "#2B2C42",
+                      }}
+                    >
+                      Private Teachers
+                    </Typography>
+                  </Link>
                   <Typography>
                     Rudi was created out of a need for instructors to find a fun
                     and engaging way to teach their students rudiments. By using
@@ -249,18 +257,20 @@ export default function App() {
                   alt="music note"
                 />
                 <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      color: "#2B2C42",
-                    }}
-                  >
-                    School Teachers
-                  </Typography>
+                  <Link to="/teachers" underline="none" className="link">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        color: "#2B2C42",
+                      }}
+                    >
+                      School Teachers
+                    </Typography>
+                  </Link>
                   <Typography>
                     Rudi is also there for school teachers and band directors
                     who need a reliable source to help their percussion students
