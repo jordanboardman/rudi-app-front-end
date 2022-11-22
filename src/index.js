@@ -14,6 +14,7 @@ import About from "./components/About.js";
 import Error from "./components/Error";
 import "./index.css";
 import Rudiments from "./components/Rudiments";
+import Dashboard from "./components/Dashboard";
 
 const store = createStore(reducer);
 
@@ -32,6 +33,7 @@ root.render(
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Error />} />
             <Route path="/rudiments" element={<Rudiments />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </BaseLayout>
       </Router>
