@@ -7,9 +7,8 @@ const BaseLayout = (props) => {
     <>
 
       <Navbar />
-      <Footer />
-
       {props.children}
+      <Footer />
     </>
   );
 };

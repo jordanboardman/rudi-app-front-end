@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 
-const AssignmentSubmit = () => {
+const AssignmentSubmit = ({submit, rudiment}) => {
   return (
     <div className="login"><Box 
     component="form"
@@ -21,7 +21,7 @@ const AssignmentSubmit = () => {
             <TextField
             sx={{width: 325}} />
             <br />
-            <Button>Submit</Button>
+            <Button onClick={()=>submit(rudiment.id)}>Submit</Button>
         </FormControl>
     </Box></div>
   )
