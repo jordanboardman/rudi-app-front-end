@@ -39,25 +39,25 @@ const Navbar = (props) => {
             Home
           </Link>
         </Typography>
-
+        
         <Typography sx={{ fontWeight: "bold" }}>
           <Link to="/about" className="link">
             About
           </Link>
         </Typography>
-
+        
         <Typography sx={{ fontWeight: "bold" }}>
           <Link to="/students" className="link">
             Students
           </Link>
         </Typography>
-
+        
         <Typography sx={{ fontWeight: "bold" }}>
           <Link to="/teachers" className="link">
             Teachers
           </Link>
         </Typography>
-
+        
         <Typography sx={{ fontWeight: "bold" }}>
           <Link to="/rudiments" className="link">
             Rudiments!
@@ -116,37 +116,45 @@ const Navbar = (props) => {
                   Home
                 </Link>
               </Typography>
-
+              
               <Typography sx={{ padding: "10px", fontWeight: "bold" }}>
                 <Link to="/about" className="link">
                   About
                 </Link>
               </Typography>
-
+              
               <Typography sx={{ padding: "10px", fontWeight: "bold" }}>
                 <Link to="/students" className="link">
                   Students
                 </Link>
               </Typography>
-
+              
               <Typography sx={{ padding: "10px", fontWeight: "bold" }}>
                 <Link to="/teachers" className="link">
                   Teachers
                 </Link>
               </Typography>
-
+              
               <Typography sx={{ padding: "10px", fontWeight: "bold" }}>
                 <Link to="/rudiments" className="link">
                   Rudiments!
                 </Link>
               </Typography>
-
+              
               <Button
-                variant="contained"
-                sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}
-              >
-                Contact
-              </Button>
+          variant="contained"
+          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}>
+            <Link to="/login" className="link">
+            Login
+            </Link>
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}>
+            <Link to="/register" className="link">
+            Register
+            </Link>
+        </Button>              
             </Box>
           </Box>
         </Toolbar>

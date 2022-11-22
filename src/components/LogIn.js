@@ -2,14 +2,46 @@ import React, {useState} from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import { useNavigate } from "react-router-dom"
+
 
 const LogIn = () => {
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const handleClick = e => {
-    e.preventDefault()
-    console.log(email)
-    console.log(password)
+  const navigate = useNavigate()
+  
+
+  const handleLogin = e => {
+    e.preventDefault();
+    try{
+      console.log('in the try')
+     fetch('http://localhost:3001/checkpassword',{
+      method: 'POST',
+      headers: {
+        'Accept':'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username:username, 
+        password:password
+      })
+    })
+      .then(res => {return res.json()})
+      .then(status => {
+        console.log(status)
+        console.log('in status')
+      if(status === '200'){
+        navigate("/")
+      }
+      else if(status === '404'){
+        navigate("/login")
+        }
+      })
+    }
+    catch (error) {
+      console.log('in the catch')
+      navigate("/login")
+    }
   }
   return (
     <>
@@ -28,7 +60,7 @@ const LogIn = () => {
           <TextField 
           id="outlined-email"
           label="Email"
-          onChange={e=>{setEmail(e.target.value)}}
+          onChange={e=>{setUsername(e.target.value)}}
           />
          
           <TextField 
@@ -41,6 +73,9 @@ const LogIn = () => {
           
           <Button
           variant="contained"
+          onClick={handleLogin}>
+          sx={{backgroundColor: '#E13C45',
+          borderRadius: '52px'}}
           onClick={handleClick}>
             Log-In
           </Button>
