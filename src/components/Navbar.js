@@ -72,9 +72,17 @@ const Navbar = () => {
 
         <Button
           variant="contained"
-          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}
-        >
-          Contact
+          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}>
+            <Link to="/login" className="link">
+            Login
+            </Link>
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "#E13C45", borderRadius: "40px" }}>
+            <Link to="/register" className="link">
+            Register
+            </Link>
         </Button>
       </Toolbar>
     </AppBar>
