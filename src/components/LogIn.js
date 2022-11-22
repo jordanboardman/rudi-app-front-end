@@ -73,10 +73,9 @@ const LogIn = () => {
           
           <Button
           variant="contained"
-          onClick={handleLogin}>
           sx={{backgroundColor: '#E13C45',
           borderRadius: '52px'}}
-          onClick={handleClick}>
+          onClick={handleLogin}>
             Log-In
           </Button>
       </Box>
