@@ -4,7 +4,7 @@ import { Card, CardHeader, CardMedia, CardContent } from '@mui/material'
 
 const LessonCard = () => {
   return (
-    <Card sx={{maxWidth: 345}}>
+    <Card sx={{maxWidth: 345, marginTop: 10}}>
         <CardHeader
         title="Rudiment Name"
         subheader="More info here" />
