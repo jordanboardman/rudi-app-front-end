@@ -9,6 +9,8 @@ import CardContent from "@mui/material/CardContent";
 import Avatar from "@mui/material/Avatar";
 // import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { CardActionArea, Box } from "@mui/material";
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 

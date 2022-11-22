@@ -2,17 +2,16 @@ import React from 'react'
 import AssignmentSubmit from './AssignmentSubmit'
 import { Card, CardHeader, CardMedia, CardContent } from '@mui/material'
 
-const LessonCard = () => {
+const LessonCard = ({rudiment}) => {
   return (
-    <Card sx={{maxWidth: 345, marginTop: 10}}>
+    <Card sx={{maxWidth: 345, marginTop: 10, marginLeft: 5}}>
         <CardHeader
-        title="Rudiment Name"
-        subheader="More info here" />
+        title={rudiment.name}/>
         <CardMedia
         component="img"
         width="345"
-        image='https://vicfirth.zildjian.com/media/amasty/blog/16_1.png'
-        alt='rudiment name' />
+        image={rudiment.img}
+        alt={rudiment.name} />
         <CardContent>
             <AssignmentSubmit />
         </CardContent>
